@@ -12,7 +12,7 @@ function obtenerPublicaciones() {
                 post.className = 'post';
                 post.innerHTML = `
                     <div class="post-header">
-                        <img src="${publicacion.foto_url}" alt="Foto de perfil" class="post-img">
+                        <img src="data:image/png;base64,${publicacion.foto_url}" alt="Foto de perfil" class="post-img">
                         <div class="post-usuario">${publicacion.nombre_usuario}</div>
                     </div>
                     <h4>${publicacion.titulo}</h4>
