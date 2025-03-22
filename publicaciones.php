@@ -314,7 +314,7 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
