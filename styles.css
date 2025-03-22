@@ -1,61 +1,94 @@
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e3f2fd; /* Azul claro */
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    max-width: 600px; 
-    overflow-y: auto; 
-    max-height: 80vh;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    gap: 20px;
 }
 
-input[type="text"], textarea {
-    width: calc(100% - 20px);
+/* Estilos para el formulario de publicaciones */
+#form-publicacion {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    flex-shrink: 0;
+}
+
+#form-publicacion h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+#form-publicacion input[type="text"],
+#form-publicacion textarea {
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #90caf9; /* Azul suave */
-    background-color: #e3f2fd;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+#form-publicacion input[type="text"]:focus,
+#form-publicacion textarea:focus {
+    border-color: #ef4444;
     outline: none;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #1565c0; /* Azul oscuro */
-    color: white;
+#form-publicacion button[type="submit"] {
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #0d47a1;
+#form-publicacion button[type="submit"]:hover {
+    background-color: #dc2626;
+}
+
+/* Estilos para las publicaciones */
+#publicaciones-container {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post {
-    background-color: #bbdefb; /* Azul claro */
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .post-header {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .post-img {
@@ -65,14 +98,41 @@ button:hover {
     margin-right: 10px;
 }
 
+.post-usuario {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.post h4 {
+    font-size: 1.125rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 0.875rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+.reacciones {
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
 .reacciones a {
-    margin-right: 10px;
-    color: #1565c0;
+    color: #ef4444;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    margin-right: 10px;
 }
 
 .reacciones a:hover {
     text-decoration: underline;
-    color: #0d47a1;
+}
+
+.reacciones a[disabled] {
+    color: #cbd5e0;
+    pointer-events: none;
 }
